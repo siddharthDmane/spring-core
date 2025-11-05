@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+&#xA;&#xA;&#xA;https://www.springframework.org/schema/beans/spring-beans.xsd
+&#xA;&#xA;&#xA;http://www.springframework.org/schema/context
+&#xA;&#xA;&#xA;https://www.springframework.org/schema/context/spring-context.xsd">
+
+    <context:annotation-config />
+
+    <!-- without autowire -->
+    <bean name="s1"
+          class="com.autowire.Student">
+        <property name="id"
+                  value="101" />
+        <property name="name"
+                  value="student_1" />
+        <property name="course"
+                  ref="course" />
+    </bean>
+
+    <!-- byName -->
+    <bean name="s2"
+          class="com.autowire.Student"
+          autowire="byName">
+        <property name="id"
+                  value="101" />
+        <property name="name"
+                  value="student_1" />
+    </bean>
+
+    <!-- byType -->
+    <bean name="s3"
+          class="com.autowire.Student"
+          autowire="byType">
+        <property name="id"
+                  value="101" />
+        <property name="name"
+                  value="student_1" />
+    </bean>
+
+    <!-- constructor -->
+    <bean name="s4"
+          class="com.autowire.Student"
+          autowire="constructor">
+        <constructor-arg value="1101"
+                         index="0" />
+        <constructor-arg value="Course_1"
+                         index="1" />
+    </bean>
+
+    <!-- course bean -->
+    <bean name="course"
+          class="com.autowire.Course"
+          autowire="constructor">
+        <property name="id"
+                  value="1101" />
+        <property name="name"
+                  value="Course_1" />
+    </bean>
+
+</beans>
