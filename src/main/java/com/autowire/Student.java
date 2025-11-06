@@ -10,6 +10,7 @@ public class Student {
 
     public Student() { }
 
+    @Autowired
     public Student(int id, String name, Course course) {
         this.id = id;
         this.name = name;
@@ -18,9 +19,6 @@ public class Student {
 
     public void setId(int id) { this.id = id;   }
     public void setName(String name) {  this.name = name;   }
-
-    @Autowired
-    @Qualifier("course")
     public void setCourse(Course course) {  this.course = course; }
 
     @Override

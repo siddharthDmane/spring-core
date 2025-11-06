@@ -11,7 +11,7 @@
     <context:annotation-config />
 
     <!-- without autowire -->
-    <bean name="s1"
+    <!-- <bean name="s1"
           class="com.autowire.Student">
         <property name="id"
                   value="101" />
@@ -19,49 +19,50 @@
                   value="student_1" />
         <property name="course"
                   ref="course" />
-    </bean>
+    </bean> -->
 
     <!-- byName -->
-    <bean name="s2"
+    <!-- <bean name="s2"
           class="com.autowire.Student"
           autowire="byName">
         <property name="id"
                   value="102" />
         <property name="name"
                   value="student_2" />
-    </bean>
+    </bean> -->
 
     <!-- byType -->
-    <bean name="s3"
+    <!-- <bean name="s3"
           class="com.autowire.Student"
           autowire="byType">
         <property name="id"
                   value="103" />
         <property name="name"
                   value="student_3" />
-    </bean>
+    </bean> -->
 
     <!-- constructor -->
-    <bean name="s4"
+    <!-- <bean name="s4"
           class="com.autowire.Student"
           autowire="constructor">
         <constructor-arg value="104"
                          index="0" />
         <constructor-arg value="Student_4"
                          index="1" />
-    </bean>
+    </bean> -->
 
-    <!-- @Autowired (byType) -->
+
+    <!-- @Autowired (constructor) -->
     <bean name="s5"
           class="com.autowire.Student">
-        <property name="id"
-                  value="105" />
-        <property name="name"
-                  value="student_5" />
-    </bean>    
+        <constructor-arg value="105"
+                         index="0" />
+        <constructor-arg value="Student_5"
+                         index="1" />
+    </bean>  
 
     <!-- course bean -->
-    <bean name="course"
+    <bean name="c1"
           class="com.autowire.Course"
           autowire="constructor">
         <property name="id"
