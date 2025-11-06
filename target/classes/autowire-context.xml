@@ -26,9 +26,9 @@
           class="com.autowire.Student"
           autowire="byName">
         <property name="id"
-                  value="101" />
+                  value="102" />
         <property name="name"
-                  value="student_1" />
+                  value="student_2" />
     </bean>
 
     <!-- byType -->
@@ -36,18 +36,18 @@
           class="com.autowire.Student"
           autowire="byType">
         <property name="id"
-                  value="101" />
+                  value="103" />
         <property name="name"
-                  value="student_1" />
+                  value="student_3" />
     </bean>
 
     <!-- constructor -->
     <bean name="s4"
           class="com.autowire.Student"
           autowire="constructor">
-        <constructor-arg value="1101"
+        <constructor-arg value="104"
                          index="0" />
-        <constructor-arg value="Course_1"
+        <constructor-arg value="Student_4"
                          index="1" />
     </bean>
 
