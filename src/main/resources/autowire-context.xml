@@ -71,4 +71,14 @@
                   value="Course_1" />
     </bean>
 
+        <!-- course bean -->
+    <bean name="c2"
+          class="com.autowire.Course"
+          autowire="constructor">
+        <property name="id"
+                  value="1102" />
+        <property name="name"
+                  value="Course_2" />
+    </bean>
+
 </beans>

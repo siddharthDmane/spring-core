@@ -11,7 +11,7 @@ public class Student {
     public Student() { }
 
     @Autowired
-    public Student(int id, String name, Course course) {
+    public Student(int id, String name, @Qualifier("c2") Course course) {
         this.id = id;
         this.name = name;
         this.course = course;
