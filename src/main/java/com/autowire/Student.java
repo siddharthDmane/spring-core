@@ -6,9 +6,6 @@ import org.springframework.beans.factory.annotation.Qualifier;
 public class Student {
     public int id;
     public String name;
-    
-    @Autowired
-    @Qualifier("course")
     public Course course;
 
     public Student() { }
@@ -21,6 +18,9 @@ public class Student {
 
     public void setId(int id) { this.id = id;   }
     public void setName(String name) {  this.name = name;   }
+
+    @Autowired
+    @Qualifier("course")
     public void setCourse(Course course) {  this.course = course; }
 
     @Override
