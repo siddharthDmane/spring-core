@@ -1,8 +1,14 @@
 package com.autowire;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+
 public class Student {
     public int id;
     public String name;
+    
+    @Autowired
+    @Qualifier("course")
     public Course course;
 
     public Student() { }

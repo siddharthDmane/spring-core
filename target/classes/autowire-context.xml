@@ -51,6 +51,15 @@
                          index="1" />
     </bean>
 
+    <!-- @Autowired (byType) -->
+    <bean name="s5"
+          class="com.autowire.Student">
+        <property name="id"
+                  value="105" />
+        <property name="name"
+                  value="student_5" />
+    </bean>    
+
     <!-- course bean -->
     <bean name="course"
           class="com.autowire.Course"
