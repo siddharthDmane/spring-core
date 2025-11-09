@@ -41,6 +41,21 @@
             <artifactId>camel-spring</artifactId>
             <version>3.4.4</version>
         </dependency> -->
+        <!-- oracle driver for jdk21 and  11g -->
+        <!-- https://mvnrepository.com/artifact/com.oracle.database.jdbc/ojdbc11 -->
+        <dependency>
+            <groupId>com.oracle.database.jdbc</groupId>
+            <artifactId>ojdbc11</artifactId>
+            <version>23.4.0.24.05</version>
+        </dependency>
+        <!-- hibernate -->
+        <!-- https://mvnrepository.com/artifact/org.hibernate.orm/hibernate-core -->
+        <!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-core -->
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-core</artifactId>
+            <version>5.4.32.Final</version>
+        </dependency>
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
@@ -48,4 +63,16 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
+
+<!-- manages conflict dependencies -->
+    <dependencyManagement>
+        <dependencies>
+        <!-- spring has 3.3.2.final and hibernate has 3.4.x so have to give explicit dependency -->
+            <dependency>
+                <groupId>org.jboss.logging</groupId>
+                <artifactId>jboss-logging</artifactId>
+                <version>3.3.2.Final</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 </project>
